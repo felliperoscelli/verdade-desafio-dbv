@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdade ou Desafio - Desbravadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎲 Verdade ou Desafio</h1>
+                <p class="subtitle">Desbravadores</p>
+            </div>
+        </header>
+
+        <!-- Category Tabs -->
+        <div class="categories-section">
+            <div class="categories-scroll">
+                <button class="category-btn active" data-category="amigo">Amigo</button>
+                <button class="category-btn" data-category="amigo-natureza">Amigo da Natureza</button>
+                <button class="category-btn" data-category="companheiro">Companheiro</button>
+                <button class="category-btn" data-category="companheiro-excursionismo">Comp. Excursionismo</button>
+                <button class="category-btn" data-category="pesquisador">Pesquisador</button>
+                <button class="category-btn" data-category="pesquisador-campo">Pesq. Campo e Bosque</button>
+                <button class="category-btn" data-category="pioneiro">Pioneiro</button>
+                <button class="category-btn" data-category="pioneiro-fronteiras">Pioneiro Fronteiras</button>
+                <button class="category-btn" data-category="excursionista">Excursionista</button>
+                <button class="category-btn" data-category="excursionista-mata">Excursionista Mata</button>
+                <button class="category-btn" data-category="guia">Guia</button>
+                <button class="category-btn" data-category="guia-exploracao">Guia Exploração</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Category Info -->
+            <div class="category-info">
+                <h2 id="categoryTitle">Classe Amigo</h2>
+                <p id="categoryStats">140 Verdades • 83 Desafios</p>
+            </div>
+
+            <!-- Item Display -->
+            <div class="item-display">
+                <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Sorteando...</p>
+                </div>
+                <div id="itemCard" class="item-card" style="display: none;">
+                    <div class="item-header">
+                        <span id="itemType" class="item-type">VERDADE</span>
+                        <span id="itemCount" class="item-count">#1</span>
+                    </div>
+                    <p id="itemText" class="item-text"></p>
+                </div>
+                <div id="emptyState" class="empty-state">
+                    <p>Clique em um botão para começar</p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="buttons-section">
+                <button id="verdadeBtn" class="btn btn-verdade">
+                    <span class="btn-label">VERDADE</span>
+                    <span id="verdadeCount" class="btn-count">140</span>
+                </button>
+                <button id="desafioBtn" class="btn btn-desafio">
+                    <span class="btn-label">DESAFIO</span>
+                    <span id="desafioCount" class="btn-count">83</span>
+                </button>
+            </div>
+
+            <!-- Footer Info -->
+            <div id="footerInfo" class="footer-info" style="display: none;">
+                <p>Clique novamente para sortear outro item</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
